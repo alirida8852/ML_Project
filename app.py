@@ -32,11 +32,16 @@ if st.button("Predict Rent"):
     input_dict = {col: 0 for col in model_columns}
 
     # Fill in numeric features directly
-    input_dict['BHK'] = bhk
+    # Fill in numeric features directly
     input_dict['Size'] = size
+    input_dict['BHK'] = bhk
     input_dict['Bathroom'] = bathroom
     input_dict['Floor_Number'] = floor_number
     input_dict['Total_Floors'] = total_floors
+    
+    # Engineered features — must match exactly what notebook created
+    input_dict['floor_ratio'] = floor_number / (total_floors + 1e-5)
+    input_dict['bhk_per_bathroom'] = bhk / (bathroom + 1e-5)
 
     # Fill in one-hot encoded features
     # Only set to 1 if the column exists (drop_first means some are baseline)
