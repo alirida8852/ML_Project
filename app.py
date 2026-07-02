@@ -1,13 +1,17 @@
-import streamlit as st 
+import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+import os
+
+# This tells Python: find files relative to where app.py itself is
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load saved model and columns
-with open('model.pkl', 'rb') as f:
+with open(os.path.join(BASE_DIR, 'model.pkl'), 'rb') as f:
     model = pickle.load(f)
 
-with open('columns.pkl', 'rb') as f:
+with open(os.path.join(BASE_DIR, 'columns.pkl'), 'rb') as f:
     model_columns = pickle.load(f)
 
 st.title("🏠 Rental Price Predictor")
