@@ -160,5 +160,5 @@ streamlit run app.py
 
 ## Author
 
-Rida Ali — [Your LinkedIn:https://www.linkedin.com/in/rida-ali-a25537276] 
-[Your GitHub: https://github.com/alirida8852]
+Rida Ali — [LinkedIn:https://www.linkedin.com/in/rida-ali-a25537276] 
+[GitHub: https://github.com/alirida8852]
