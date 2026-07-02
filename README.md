@@ -3,8 +3,7 @@
 A machine learning project that predicts monthly rental prices 
 across 6 major Indian cities using property features.
 
-**Live Demo**: [coming soon]
-
+**Live Demo**: https://mlrentprediction.streamlit.app
 ---
 
 ## Problem Statement
